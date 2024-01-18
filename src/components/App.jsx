@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchImages } from './ServerRequest/ServerRequest';
+import { fetchImages } from './Api';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
