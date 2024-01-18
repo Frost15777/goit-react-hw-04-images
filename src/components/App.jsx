@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { fetchImages } from './Api';
 import Searchbar from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 import Loader from './Loader/Loader';
-import { AppWrapper } from './App.styled';
+import { AppDiv } from './App.styled';
 import { ToastContainer, toast, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -31,7 +31,6 @@ const App = () => {
         if (!responseImages.hits.length) {
           toast('Sorry, there are no images matching your request...', {
             position: toast.POSITION.TOP_CENTER,
-            icon: '🤔',
           });
           return setQuery('');
         }
@@ -83,7 +82,7 @@ const App = () => {
   };
 
   return (
-    <AppWrapper>
+    <AppDiv>
       <ToastContainer transition={Flip} />
       <Searchbar onSubmit={handleSearchSubmit} />
 
@@ -98,7 +97,7 @@ const App = () => {
       )}
 
       {showModal && <Modal image={selectedImage} onClose={handleModalClose} />}
-    </AppWrapper>
+    </AppDiv>
   );
 };
 

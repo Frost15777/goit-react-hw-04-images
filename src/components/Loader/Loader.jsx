@@ -1,6 +1,6 @@
 import React from 'react';
 import { Vortex } from 'react-loader-spinner';
-import { LoadWrapper } from './Loader.styled'
+import { LoadWrapper } from './Loader.styled';
 
 const Loader = () => {
   return (
